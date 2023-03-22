@@ -80,7 +80,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Compile and release
-        uses: rust-build/rust-build.action@v1.4.3
+        uses: brianbruggeman/rust-build.action@v1.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -105,7 +105,7 @@ jobs:
       - uses: actions/checkout@master
       - name: Compile
         id: compile
-        uses: rust-build/rust-build.action@v1.4.3
+        uses: brianbruggeman/rust-build.action@v1.0.0
         with:
           RUSTTARGET: x86_64-unknown-linux-musl
           UPLOAD_MODE: none
